@@ -210,10 +210,74 @@ JOINING OUR OFFICIAL WHATSAPP GROUP AND CHANNEL. YOU CAN ALSO CONTACT THE OWNER 
 
 <br>
 
-```
-THANK YOU DybyTech,  & YOU SUPPORTERS
-```
------
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 ------
+### ⚙️ Configuration `.env` File
+
+```env
+SESSION_ID="GOTAR~XMD~"
+AUTO_READ_STATUS=true
+STATUS_READ_MSG="*Status Seen By GOTAR-XMD ⚡*"
+AUTO_STATUS_REPLY=false
+AUTO_REJECT_CALLS=false
+MODE="public"
+WELCOME=false
+AUTO_READ_MESSAGES=false
+AUTO_TYPING=false
+OWNER_NAME="GOTAR-XMD"
+OWNER_NUMBER="8494967948"
+AUTO_RECORDING=false
+ALWAYS_ONLINE=false
+AUTO_BLOCK=true
+AUTO_REACT=false
+PREFIX="."
+```
+
+### ⚙️ .github/workflows/deploy.yml
+
+```workflows
+name: Node.js CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 */6 * * *'  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install FFmpeg
+      run: sudo apt-get install -y ffmpeg
+
+    - name: Start application with timeout
+      run: |
+        timeout 21590s npm start  # Limite l'exécution à 5h 59m 50s
+
+    - name: Save state (Optional)
+      run: |
+        ./save_state.sh
