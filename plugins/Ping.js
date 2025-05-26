@@ -2,7 +2,7 @@ const config = require('../config');
 const { cmd, commands } = require('../command');
 
 cmd({
-    pattern: "ping2",
+    pattern: "ping",
     desc: "Check bot's response time.",
     category: "main",
     react: "🍂",
