@@ -5,7 +5,7 @@ function convertToBool(text, fault = 'true') {
     return text === fault ? true : false;
 }
 module.exports = {
-SESSION_ID: process.env.SESSION_ID || "GOTAR~XMD~rZo1BZjZ#BpqnhmSRSFDluw1yUyoV5EOBUiNQCDtDpiuJU7e7Hpc",
+SESSION_ID: process.env.SESSION_ID || "",
 // add your Session Id 
 AUTO_STATUS_SEEN: process.env.AUTO_STATUS_SEEN || "true",
 // make true or false status auto seen
@@ -27,9 +27,9 @@ MENU_IMAGE_URL: process.env.MENU_IMAGE_URL || "https://files.catbox.moe/82b8gr.j
 // add custom menu and mention reply image url
 PREFIX: process.env.PREFIX || ".",
 // add your prifix for bot   
-BOT_NAME: process.env.BOT_NAME || "𝗚𝗢𝗧𝗔𝗥-𝗫𝗠𝗗",
+BOT_NAME: process.env.BOT_NAME || "CHXSE-𝗫𝗠𝗗",
 // add bot namw here for menu
-STICKER_NAME: process.env.STICKER_NAME || "𝗚𝗢𝗧𝗔𝗥-𝗫𝗠𝗗",
+STICKER_NAME: process.env.STICKER_NAME || "CHXSE-𝗫𝗠𝗗",
 // type sticker pack name 
 CUSTOM_REACT: process.env.CUSTOM_REACT || "false",
 // make this true for custum emoji react    
@@ -41,7 +41,7 @@ OWNER_NUMBER: process.env.OWNER_NUMBER || "2349099351445",
 // add your bot owner number
 OWNER_NAME: process.env.OWNER_NAME || "Chxse",
 // add bot owner name
-DESCRIPTION: process.env.DESCRIPTION || "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ɢᴏᴛᴀʀ ᴛᴇᴄʜ*",
+DESCRIPTION: process.env.DESCRIPTION || "*© CHXSE*",
 // add bot owner name    
 ALIVE_IMG: process.env.ALIVE_IMG || "https://files.catbox.moe/rful77.jpg",
 // add img for alive msg
